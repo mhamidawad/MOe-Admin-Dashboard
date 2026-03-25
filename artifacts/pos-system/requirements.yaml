@@ -1,0 +1,14 @@
+packages:
+  "recharts": "For rendering sales and dashboard charts"
+  "date-fns": "For formatting dates nicely in Arabic"
+  "lucide-react": "For beautiful UI icons"
+  "clsx": "For conditional class merging"
+  "tailwind-merge": "For merging tailwind classes safely"
+  "@hookform/resolvers": "For form validation"
+  "react-hook-form": "For robust forms"
+  "zod": "For schema validation"
+
+notes:
+  - Application must run strictly in RTL mode for Arabic
+  - customFetch is expected to handle the 'auth-token' from localStorage
+  - @workspace/api-client-react provides all TanStack Query hooks
