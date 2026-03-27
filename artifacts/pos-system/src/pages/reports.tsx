@@ -27,7 +27,7 @@ export default function Reports() {
               <Tooltip 
                 cursor={{fill: 'transparent'}}
                 contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
-                formatter={(value: number) => [`${value} ر.س`, 'المبيعات']}
+                formatter={(value: number) => [`${value} ج.س`, 'المبيعات']}
               />
               <Bar dataKey="total" fill="hsl(var(--primary))" radius={[6, 6, 0, 0]} />
             </BarChart>

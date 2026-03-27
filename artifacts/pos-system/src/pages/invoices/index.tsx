@@ -63,7 +63,7 @@ export default function Invoices() {
                     <TableCell className="font-mono font-bold text-primary">{invoice.invoiceNumber}</TableCell>
                     <TableCell>{format(new Date(invoice.createdAt), 'PPP hh:mm a', { locale: ar })}</TableCell>
                     <TableCell>{invoice.customerName || <span className="text-muted-foreground">عميل نقدي</span>}</TableCell>
-                    <TableCell className="font-bold">{invoice.total} ر.س</TableCell>
+                    <TableCell className="font-bold">{invoice.total} ج.س</TableCell>
                     <TableCell>
                       {invoice.paymentMethod === 'cash' ? 'نقدي' : invoice.paymentMethod === 'card' ? 'بطاقة' : 'تحويل'}
                     </TableCell>
