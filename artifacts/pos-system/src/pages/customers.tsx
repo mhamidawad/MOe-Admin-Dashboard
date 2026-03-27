@@ -83,7 +83,7 @@ export default function Customers() {
                   <TableCell className="text-muted-foreground">{customer.email || '-'}</TableCell>
                   <TableCell>{format(new Date(customer.createdAt), 'PPP', { locale: ar })}</TableCell>
                   <TableCell>{customer.totalPurchases || 0} طلبات</TableCell>
-                  <TableCell className="text-primary font-bold">{customer.totalSpent || 0} ج.س</TableCell>
+                  <TableCell className="text-primary font-bold">{customer.totalSpent || 0} SDG</TableCell>
                 </TableRow>
               ))
             )}

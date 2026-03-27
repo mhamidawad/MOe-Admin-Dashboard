@@ -25,7 +25,7 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <StatCard 
           title="مبيعات اليوم" 
-          value={`${stats.todaySales.toLocaleString()} ج.س`} 
+          value={`${stats.todaySales.toLocaleString()} SDG`} 
           icon={DollarSign} 
           colorClass="bg-emerald-500/10 text-emerald-500"
           trend="+12%"
@@ -33,7 +33,7 @@ export default function Dashboard() {
         />
         <StatCard 
           title="المبيعات الشهرية" 
-          value={`${stats.monthSales.toLocaleString()} ج.س`} 
+          value={`${stats.monthSales.toLocaleString()} SDG`} 
           icon={ShoppingBag} 
           colorClass="bg-blue-500/10 text-blue-500"
           trend="+8%"
@@ -71,7 +71,7 @@ export default function Dashboard() {
                 <YAxis stroke="#94a3b8" fontSize={12} tickFormatter={(val) => `${val}`} />
                 <Tooltip 
                   contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
-                  formatter={(value: number) => [`${value} ج.س`, 'المبيعات']}
+                  formatter={(value: number) => [`${value} SDG`, 'المبيعات']}
                   labelFormatter={(label) => format(new Date(label), 'PPP', { locale: ar })}
                 />
                 <Line 
@@ -97,7 +97,7 @@ export default function Dashboard() {
                   <p className="text-xs text-muted-foreground">{format(new Date(sale.createdAt), 'hh:mm a')}</p>
                 </div>
                 <div className="text-end">
-                  <p className="font-bold text-primary">{sale.total} ج.س</p>
+                  <p className="font-bold text-primary">{sale.total} SDG</p>
                   <p className="text-xs text-muted-foreground">{sale.paymentMethod === 'cash' ? 'نقدي' : 'بطاقة'}</p>
                 </div>
               </div>

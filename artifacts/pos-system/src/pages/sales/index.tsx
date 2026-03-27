@@ -91,7 +91,7 @@ export default function SalesList() {
                         <TableRow key={sale.id}>
                           <TableCell className="font-mono text-sm">{sale.invoiceNumber}</TableCell>
                           <TableCell>{sale.customerName ?? "عميل عام"}</TableCell>
-                          <TableCell className="font-semibold">{sale.total.toFixed(2)} ج.س</TableCell>
+                          <TableCell className="font-semibold">{sale.total.toFixed(2)} SDG</TableCell>
                           <TableCell>{paymentLabels[sale.paymentMethod] ?? sale.paymentMethod}</TableCell>
                           <TableCell>
                             <Badge variant={statusVariants[sale.status] ?? "default"}>

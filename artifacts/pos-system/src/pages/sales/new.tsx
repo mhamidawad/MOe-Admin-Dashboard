@@ -105,7 +105,7 @@ export default function POS() {
                 <div>
                   <h4 className="font-semibold text-sm line-clamp-2">{product.name}</h4>
                   <div className="flex items-center justify-between mt-2">
-                    <span className="font-bold text-primary">{product.price} ج.س</span>
+                    <span className="font-bold text-primary">{product.price} SDG</span>
                     <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-md">{product.stock} متبقي</span>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ export default function POS() {
                 <div key={item.product.id} className="bg-muted/30 p-3 rounded-xl flex gap-3 items-center border border-border/50">
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-sm truncate">{item.product.name}</p>
-                    <p className="text-primary font-bold text-sm mt-1">{item.product.price} ج.س</p>
+                    <p className="text-primary font-bold text-sm mt-1">{item.product.price} SDG</p>
                   </div>
                   <div className="flex items-center gap-2 bg-background border border-border rounded-lg p-1">
                     <button onClick={() => updateQuantity(item.product.id, 1)} className="p-1 hover:bg-muted rounded-md"><Plus className="h-3 w-3"/></button>
@@ -166,7 +166,7 @@ export default function POS() {
           <div className="space-y-3 mb-6">
             <div className="flex justify-between text-sm">
               <span className="text-muted-foreground">المجموع الفرعي</span>
-              <span className="font-semibold">{subtotal.toFixed(2)} ج.س</span>
+              <span className="font-semibold">{subtotal.toFixed(2)} SDG</span>
             </div>
             <div className="flex justify-between items-center text-sm">
               <span className="text-muted-foreground">خصم</span>
@@ -178,7 +178,7 @@ export default function POS() {
             </div>
             <div className="pt-3 border-t border-border/50 flex justify-between items-end">
               <span className="font-bold text-lg">الإجمالي النهائي</span>
-              <span className="text-3xl font-black font-display text-primary">{total.toFixed(2)} <span className="text-base font-bold text-muted-foreground">ج.س</span></span>
+              <span className="text-3xl font-black font-display text-primary">{total.toFixed(2)} <span className="text-base font-bold text-muted-foreground">SDG</span></span>
             </div>
           </div>
 

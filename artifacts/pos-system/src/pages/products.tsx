@@ -135,7 +135,7 @@ export default function Products() {
                     <TableCell className="font-mono text-xs">{product.barcode || '-'}</TableCell>
                     <TableCell className="font-medium">{product.name}</TableCell>
                     <TableCell>{product.categoryName || '-'}</TableCell>
-                    <TableCell className="font-semibold text-primary">{product.price} ج.س</TableCell>
+                    <TableCell className="font-semibold text-primary">{product.price} SDG</TableCell>
                     <TableCell>
                       <div className="flex items-center gap-2">
                         <span>{product.stock}</span>
@@ -190,11 +190,11 @@ export default function Products() {
                   <Input value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} placeholder="وصف مختصر للمنتج" />
                 </div>
                 <div>
-                  <label className="text-sm font-medium mb-1 block">سعر البيع (ج.س) *</label>
+                  <label className="text-sm font-medium mb-1 block">سعر البيع (SDG) *</label>
                   <Input type="number" step="0.01" min="0" value={form.price} onChange={e => setForm(f => ({ ...f, price: e.target.value }))} placeholder="0.00" required dir="ltr" />
                 </div>
                 <div>
-                  <label className="text-sm font-medium mb-1 block">سعر التكلفة (ج.س)</label>
+                  <label className="text-sm font-medium mb-1 block">سعر التكلفة (SDG)</label>
                   <Input type="number" step="0.01" min="0" value={form.cost} onChange={e => setForm(f => ({ ...f, cost: e.target.value }))} placeholder="0.00" dir="ltr" />
                 </div>
                 <div>

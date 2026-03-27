@@ -74,8 +74,8 @@ export default function InvoiceDetail() {
                 <tr key={i}>
                   <td className="py-4 font-medium">{item.productName}</td>
                   <td className="py-4 text-center">{item.quantity}</td>
-                  <td className="py-4 text-center">{item.unitPrice} ج.س</td>
-                  <td className="py-4 text-end font-bold">{item.total} ج.س</td>
+                  <td className="py-4 text-center">{item.unitPrice} SDG</td>
+                  <td className="py-4 text-end font-bold">{item.total} SDG</td>
                 </tr>
               ))}
             </tbody>
@@ -87,21 +87,21 @@ export default function InvoiceDetail() {
           <div className="w-1/2 ms-auto space-y-3 text-sm">
             <div className="flex justify-between">
               <span className="text-muted-foreground">المجموع الفرعي</span>
-              <span className="font-medium">{invoice.subtotal} ج.س</span>
+              <span className="font-medium">{invoice.subtotal} SDG</span>
             </div>
             {invoice.discount > 0 && (
               <div className="flex justify-between text-emerald-600">
                 <span>الخصم</span>
-                <span>-{invoice.discount} ج.س</span>
+                <span>-{invoice.discount} SDG</span>
               </div>
             )}
             <div className="flex justify-between">
               <span className="text-muted-foreground">الضريبة المضافة (15%)</span>
-              <span className="font-medium">{invoice.tax} ج.س</span>
+              <span className="font-medium">{invoice.tax} SDG</span>
             </div>
             <div className="flex justify-between items-center pt-4 border-t-2 border-border mt-2">
               <span className="font-bold text-lg">الإجمالي</span>
-              <span className="font-black text-2xl text-primary font-display">{invoice.total} ج.س</span>
+              <span className="font-black text-2xl text-primary font-display">{invoice.total} SDG</span>
             </div>
           </div>
         </div>
